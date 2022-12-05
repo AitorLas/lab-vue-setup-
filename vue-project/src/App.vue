@@ -1,47 +1,110 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+<script>
+export default {
+  name: "App",
+};
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+  <div id="app">
+    <header>
+      <div>
+        <img src="./images/Ironhack_logo.png" alt="ironhack-logo" />
+      </div>
+      <div>
+        <img src="./images/Burger_menu.png" alt="burguer-menu"/>
+      </div>
+    </header>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+    <body>
+      <div>
+        <div class ="pic-body">
+        <img src="./images/Vue_logo.png" alt="vue-logo"/>
+      </div>
+      <h1>Welcome to Vue.js</h1>
+      <p>
+        Become a coding ninja with the fastest-<br>
+        growing JavaScript framework
+      </p>
     </div>
-  </header>
+    </body>
 
-  <main>
-    <TheWelcome />
-  </main>
+    <footer>
+      <div class ="colum1">
+        <img src="./images/USP-1.png" alt="picture-colum1"/>
+      
+      <h1 title-colum1>Performant</h1>
+      <p text-colum1>
+        Tryly reactive, compiler-<br>
+        optimized renderin<br>
+        system that rarely<br>
+        requires manual<br>
+        optimization.
+      </p>
+    </div>
+      <div colum2>
+       
+        <img src="./images/USP-2.png" alt="picture-colum2"/>
+      
+        <h1 title-colum1>Aproachable</h1>
+        <p text-colum2>
+          Builds on toop of standard<br>
+        HTML, CSS and JavaScript<br>
+        with intuitive API and<br>
+      world-class<br>
+      documentation.
+        </p>
+</div>
+        <div colum3>
+          <img src="./images/USP-3.png" alt="picture-colum3"/>
+        <h1 title-colum3>
+          Versatile
+        </h1>
+        <p text-colum3>
+          A rich, incrementally<br>
+        adoptable ecosystem<br>
+that scales between a<br>
+library and a full-<br>
+featured framework.
+        </p>
+        </div>
+    </footer>
+  </div>
 </template>
 
 <style scoped>
+
+
+
 header {
-  line-height: 1.5;
+
+  display: flex;
+  justify-content: space-between;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 20px;
+}
+body {
+  display: flex;
+justify-content: center;
+  background-color: blueviolet;
+}
+.pic-body {
+  display: flex;
+justify-content: center;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+footer {
+  display: flex;
+justify-content: space-around;
+align-items: center;
+  background-color: aqua;
 }
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
+.colum1 {
+display: flex;
+justify-content: center;
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
 
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
 }
+
 </style>
